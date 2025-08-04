@@ -41,7 +41,7 @@ def put_text_lines(image, list_texts, position, color=(0, 255, 0), **kwargs):
     if isinstance(list_texts, str):
         list_texts = [list_texts]
     for line in list_texts:
-        text_size = cv2.getTextSize(line, cv2.FONT_HERSHEY_SIMPLEX, 0.8, 2)[0]
+        text_size = cv2.getTextSize(line, cv2.FONT_HERSHEY_SIMPLEX, font_scale, thickness)[0]
         cv2.putText(
             drawed_image, 
             line, 
