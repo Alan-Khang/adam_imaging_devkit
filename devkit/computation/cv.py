@@ -68,8 +68,8 @@ def draw_frame_axes(
     for rvec, tvec in zip(rvecs, tvecs):
         annotated_image = cv2.drawFrameAxes(
             annotated_image, 
-            matrix_coefficients, 
-            distortion_coefficients, 
+            cam_K, 
+            distortion_coeff,
             rvec, 
             tvec, 
             axis_length)
